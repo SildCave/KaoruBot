@@ -40,7 +40,12 @@ def create_schema(
     )
     database.create_table(
         table_name="reactions",
-        columns="reaction_name TEXT PRIMARY KEY, emoji TEXT, guild_id INTEGER, message_id INTEGER, channel_id INTEGER, user_id INTEGER"
+        columns="reaction_name TEXT, emoji TEXT, guild_id INTEGER, message_id INTEGER, channel_id INTEGER, user_id INTEGER"
+    )
+
+    database.create_table(
+        table_name="reaction_tracker",
+        columns="guild_id INTEGER, reactions_announcement_channel_id INTEGER, tracked_reaction_emoji TEXT"
     )
 
 db = Database()

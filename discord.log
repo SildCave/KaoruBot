@@ -1,41 +1,100 @@
-[2024-01-08 16:57:48] [INFO    ] discord.client: logging in using static token
-[2024-01-08 16:57:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0305b6d02778e23f3c45a3f66c198a6f).
-[2024-01-08 16:57:51] [INFO    ] root: Bot is ready.
-[2024-01-08 16:57:56] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+[2024-01-08 17:42:06] [INFO    ] discord.client: logging in using static token
+[2024-01-08 17:42:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a6ec5b4957ea8b65979aa7284e2c668e).
+[2024-01-08 17:42:09] [INFO    ] root: Bot is ready.
+[2024-01-08 18:18:02] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:18:03] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: fe82e07abc50bbae5e46ec085244431b).
+[2024-01-08 18:18:05] [INFO    ] root: Bot is ready.
+[2024-01-08 18:18:24] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'ssss'
 Traceback (most recent call last):
-  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
-    await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 38, in on_raw_reaction_add
-    self.bot.db.insert(
-AttributeError: 'Bot' object has no attribute 'db'
-[2024-01-08 16:58:16] [INFO    ] discord.client: logging in using static token
-[2024-01-08 16:58:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dd6052652f0c63662b3855661dd52613).
-[2024-01-08 16:58:19] [INFO    ] root: Bot is ready.
-[2024-01-08 16:58:23] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 852, in _invoke_with_namespace
+    transformed_values = await self._transform_arguments(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 816, in _transform_arguments
+    raise CommandSignatureMismatch(self) from None
+discord.app_commands.errors.CommandSignatureMismatch: The signature for command 'ssss' is different from the one provided by Discord. This can happen because either your code is out of date or you have not synced the commands with Discord, causing the mismatch in data. It is recommended to sync the command tree to fix this issue.
+[2024-01-08 18:18:40] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'ssss'
 Traceback (most recent call last):
-  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
-    await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 38, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.OperationalError: table reactions has no column named reaction_name
-[2024-01-08 16:58:37] [INFO    ] discord.client: logging in using static token
-[2024-01-08 16:58:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1791ca4689260f081efe5d3d988a9ee6).
-[2024-01-08 16:58:40] [INFO    ] root: Bot is ready.
-[2024-01-08 17:01:22] [INFO    ] discord.client: logging in using static token
-[2024-01-08 17:01:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 79dcd5fbb9d9be00693163bee97a545c).
-[2024-01-08 17:01:26] [INFO    ] root: Bot is ready.
-[2024-01-08 17:01:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 852, in _invoke_with_namespace
+    transformed_values = await self._transform_arguments(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 816, in _transform_arguments
+    raise CommandSignatureMismatch(self) from None
+discord.app_commands.errors.CommandSignatureMismatch: The signature for command 'ssss' is different from the one provided by Discord. This can happen because either your code is out of date or you have not synced the commands with Discord, causing the mismatch in data. It is recommended to sync the command tree to fix this issue.
+[2024-01-08 18:20:38] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:20:39] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d7c8ca00a23b592f37a905c6871b9c36).
+[2024-01-08 18:20:41] [INFO    ] root: Bot is ready.
+[2024-01-08 18:20:43] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'ssss'
 Traceback (most recent call last):
-  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
-    await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:01:49] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 852, in _invoke_with_namespace
+    transformed_values = await self._transform_arguments(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 816, in _transform_arguments
+    raise CommandSignatureMismatch(self) from None
+discord.app_commands.errors.CommandSignatureMismatch: The signature for command 'ssss' is different from the one provided by Discord. This can happen because either your code is out of date or you have not synced the commands with Discord, causing the mismatch in data. It is recommended to sync the command tree to fix this issue.
+[2024-01-08 18:22:54] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:22:56] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8024412eeba4bdd22a190505d0954bdc).
+[2024-01-08 18:22:58] [INFO    ] root: Bot is ready.
+[2024-01-08 18:47:12] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:47:13] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ebd70a739645346d893ae7e590239ab0).
+[2024-01-08 18:47:15] [INFO    ] root: Bot is ready.
+[2024-01-08 18:52:14] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:52:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0ffe08e48ffa06cfd1d0c5054bdb243c).
+[2024-01-08 18:52:17] [INFO    ] root: Bot is ready.
+[2024-01-08 18:54:23] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:54:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 56222590a9fccfe67ec922edfa71ba4f).
+[2024-01-08 18:54:26] [INFO    ] root: Bot is ready.
+[2024-01-08 18:56:49] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:56:51] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bb2d3f9d414a235b6daebfe6de8570db).
+[2024-01-08 18:56:53] [INFO    ] root: Bot is ready.
+[2024-01-08 18:57:00] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 62, in add_reaction_to_tracker
+    if interaction.user._permissions.administrator:
+AttributeError: 'int' object has no attribute 'administrator'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'register_reaction_for_tracking' raised an exception: AttributeError: 'int' object has no attribute 'administrator'
+[2024-01-08 18:58:32] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:58:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e09aa8d87f6264fb9ea35e23704fa12b).
+[2024-01-08 18:58:35] [INFO    ] root: Bot is ready.
+[2024-01-08 18:58:37] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 62, in add_reaction_to_tracker
+    if interaction.user.server_permissions.administrator:
+AttributeError: 'Member' object has no attribute 'server_permissions'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'register_reaction_for_tracking' raised an exception: AttributeError: 'Member' object has no attribute 'server_permissions'
+[2024-01-08 18:59:24] [INFO    ] discord.client: logging in using static token
+[2024-01-08 18:59:25] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3219be118e203d81426a0c5085310780).
+[2024-01-08 18:59:27] [INFO    ] root: Bot is ready.
+[2024-01-08 19:00:17] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:00:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 228a82b98cae5a13fe753629899897a1).
+[2024-01-08 19:00:20] [INFO    ] root: Bot is ready.
+[2024-01-08 19:01:45] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
     await self._call(interaction)
@@ -43,94 +102,462 @@ Traceback (most recent call last):
     command, options = self._get_app_command_options(data)
   File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
     raise CommandNotFound(name, parents)
-discord.app_commands.errors.CommandNotFound: Application command 'ss' not found
-[2024-01-08 17:03:45] [INFO    ] discord.client: logging in using static token
-[2024-01-08 17:03:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3a17863201b588c0f342aae8558cda8c).
-[2024-01-08 17:03:48] [INFO    ] root: Bot is ready.
-[2024-01-08 17:04:11] [INFO    ] discord.client: logging in using static token
-[2024-01-08 17:04:12] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a67b08315ccd5ce8a312748ef55a57bc).
-[2024-01-08 17:04:14] [INFO    ] root: Bot is ready.
-[2024-01-08 17:04:39] [INFO    ] discord.client: logging in using static token
-[2024-01-08 17:04:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c7581849b331912bdd7490456979d173).
-[2024-01-08 17:04:42] [INFO    ] root: Bot is ready.
-[2024-01-08 17:04:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+discord.app_commands.errors.CommandNotFound: Application command 'ssss' not found
+[2024-01-08 19:11:12] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:11:13] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6309bc9c11a135659f2e7ecdafbcf7ad).
+[2024-01-08 19:11:15] [INFO    ] root: Bot is ready.
+[2024-01-08 19:11:20] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:11:21] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 86b2499d8ef30620687b2aefc80f8ebd).
+[2024-01-08 19:11:23] [INFO    ] root: Bot is ready.
+[2024-01-08 19:11:27] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
 Traceback (most recent call last):
-  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
-    await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
     self.bot.database.insert(
   File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
     self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:04:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+sqlite3.OperationalError: table reaction_tracker has no column named trached_reaction_emoji
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'register_reaction_for_tracking' raised an exception: OperationalError: table reaction_tracker has no column named trached_reaction_emoji
+[2024-01-08 19:11:53] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:11:55] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b9c0757726b129fbfc4e3e9a94747670).
+[2024-01-08 19:11:57] [INFO    ] root: Bot is ready.
+[2024-01-08 19:13:35] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:13:36] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9dc83d3741b7e2449932eec1c424e42a).
+[2024-01-08 19:13:38] [INFO    ] root: Bot is ready.
+[2024-01-08 19:14:31] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:14:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d3f87e302efc57c9d942ab920289aaed).
+[2024-01-08 19:14:34] [INFO    ] root: Bot is ready.
+[2024-01-08 19:15:07] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:15:08] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bc1229acd3cf71d44cc353a275654505).
+[2024-01-08 19:15:10] [INFO    ] root: Bot is ready.
+[2024-01-08 19:15:32] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:15:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 455abb0a4e1eb6bc9bda880366c01c6a).
+[2024-01-08 19:15:35] [INFO    ] root: Bot is ready.
+[2024-01-08 19:15:36] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:04:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    subscribed_reactions = self.bot.database.select(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:16:32] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:16:34] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d6ee34fda6e60ba3bfc5228e2a7095d5).
+[2024-01-08 19:16:36] [INFO    ] root: Bot is ready.
+[2024-01-08 19:16:37] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:19] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:16:37] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 50, in on_raw_reaction_add
+    subscribed_reactions = self.bot.database.select(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:17:19] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:17:21] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 741e1d549e84e4d75770d012509daa35).
+[2024-01-08 19:17:23] [INFO    ] root: Bot is ready.
+[2024-01-08 19:17:25] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji.strip():
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-08 19:17:25] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:26] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:17:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:27] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:17:47] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
-    self.bot.database.insert(
-  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
-    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
-[2024-01-08 17:05:29] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji.strip():
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-08 19:18:10] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:18:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 62197aa5cc318f0ad6883c4c650afc38).
+[2024-01-08 19:18:13] [INFO    ] root: Bot is ready.
+[2024-01-08 19:18:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
 Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
     await coro(*args, **kwargs)
-  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji.strip():
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-08 19:18:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:18:54] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:18:55] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 41b0481150856cea12d4b0553287c869).
+[2024-01-08 19:18:57] [INFO    ] root: Bot is ready.
+[2024-01-08 19:19:00] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:19:55] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:19:56] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e46874c29984b9faffa9269353027cba).
+[2024-01-08 19:19:58] [INFO    ] root: Bot is ready.
+[2024-01-08 19:20:01] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:20:11] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:20:12] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: efc08613d390f191df37923ec2d84090).
+[2024-01-08 19:20:14] [INFO    ] root: Bot is ready.
+[2024-01-08 19:20:24] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 852, in _invoke_with_namespace
+    transformed_values = await self._transform_arguments(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 816, in _transform_arguments
+    raise CommandSignatureMismatch(self) from None
+discord.app_commands.errors.CommandSignatureMismatch: The signature for command 'register_reaction_for_tracking' is different from the one provided by Discord. This can happen because either your code is out of date or you have not synced the commands with Discord, causing the mismatch in data. It is recommended to sync the command tree to fix this issue.
+[2024-01-08 19:20:24] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
     self.bot.database.insert(
   File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
     self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
-sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+sqlite3.OperationalError: attempt to write a readonly database
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'register_reaction_for_tracking' raised an exception: OperationalError: attempt to write a readonly database
+[2024-01-08 19:20:45] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'register_reaction_for_tracking'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.OperationalError: attempt to write a readonly database
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'register_reaction_for_tracking' raised an exception: OperationalError: attempt to write a readonly database
+[2024-01-08 19:20:53] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:21:17] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:21:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:23:31] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:23:32] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1832162a8589acd12fcedec803f078c5).
+[2024-01-08 19:23:34] [INFO    ] root: Bot is ready.
+[2024-01-08 19:24:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:24:36] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:24:40] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:24:53] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:25:07] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:25:10] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:25:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:25:44] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:27:39] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:28:58] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:28:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0c9aece7a0353a0fd3bb86e6c9a41709).
+[2024-01-08 19:29:01] [INFO    ] root: Bot is ready.
+[2024-01-08 19:29:08] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:29:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:29:35] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:29:38] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:30:29] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:30:31] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7d8312f7841904e29d611c0125ccb258).
+[2024-01-08 19:30:33] [INFO    ] root: Bot is ready.
+[2024-01-08 19:30:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji_name.strip() & reaction_guild_id == guild_id:
+TypeError: unsupported operand type(s) for &: 'str' and 'int'
+[2024-01-08 19:30:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:30:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji_name.strip() & reaction_guild_id == guild_id:
+TypeError: unsupported operand type(s) for &: 'str' and 'int'
+[2024-01-08 19:30:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:31:03] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:31:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1e967f4e0c1a6d9f6c703dc242acd45c).
+[2024-01-08 19:31:06] [INFO    ] root: Bot is ready.
+[2024-01-08 19:31:09] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:31:09] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji_name.strip() & reaction_guild_id == guild_id:
+TypeError: unsupported operand type(s) for &: 'str' and 'int'
+[2024-01-08 19:31:09] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:31:09] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji_name.strip() & reaction_guild_id == guild_id:
+TypeError: unsupported operand type(s) for &: 'str' and 'int'
+[2024-01-08 19:31:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 60, in on_raw_reaction_add
+    if reaction_emoji == emoji_name.strip() & reaction_guild_id == guild_id:
+TypeError: unsupported operand type(s) for &: 'str' and 'int'
+[2024-01-08 19:31:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:31:43] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:31:44] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c62faa8c66e8945633b81a50a6cbc9b5).
+[2024-01-08 19:31:46] [INFO    ] root: Bot is ready.
+[2024-01-08 19:31:48] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:32:14] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
