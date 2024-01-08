@@ -38,6 +38,10 @@ def create_schema(
         table_name="roles",
         columns="role_id INTEGER PRIMARY KEY, emoji TEXT, guild_id INTEGER, message_id INTEGER, channel_id INTEGER"
     )
+    database.create_table(
+        table_name="reactions",
+        columns="reaction_name TEXT PRIMARY KEY, emoji TEXT, guild_id INTEGER, message_id INTEGER, channel_id INTEGER, user_id INTEGER"
+    )
 
 db = Database()
 create_schema(db)

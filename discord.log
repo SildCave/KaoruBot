@@ -1,0 +1,136 @@
+[2024-01-08 16:57:48] [INFO    ] discord.client: logging in using static token
+[2024-01-08 16:57:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0305b6d02778e23f3c45a3f66c198a6f).
+[2024-01-08 16:57:51] [INFO    ] root: Bot is ready.
+[2024-01-08 16:57:56] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 38, in on_raw_reaction_add
+    self.bot.db.insert(
+AttributeError: 'Bot' object has no attribute 'db'
+[2024-01-08 16:58:16] [INFO    ] discord.client: logging in using static token
+[2024-01-08 16:58:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dd6052652f0c63662b3855661dd52613).
+[2024-01-08 16:58:19] [INFO    ] root: Bot is ready.
+[2024-01-08 16:58:23] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 38, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.OperationalError: table reactions has no column named reaction_name
+[2024-01-08 16:58:37] [INFO    ] discord.client: logging in using static token
+[2024-01-08 16:58:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 1791ca4689260f081efe5d3d988a9ee6).
+[2024-01-08 16:58:40] [INFO    ] root: Bot is ready.
+[2024-01-08 17:01:22] [INFO    ] discord.client: logging in using static token
+[2024-01-08 17:01:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 79dcd5fbb9d9be00693163bee97a545c).
+[2024-01-08 17:01:26] [INFO    ] root: Bot is ready.
+[2024-01-08 17:01:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:01:49] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'ss' not found
+[2024-01-08 17:03:45] [INFO    ] discord.client: logging in using static token
+[2024-01-08 17:03:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3a17863201b588c0f342aae8558cda8c).
+[2024-01-08 17:03:48] [INFO    ] root: Bot is ready.
+[2024-01-08 17:04:11] [INFO    ] discord.client: logging in using static token
+[2024-01-08 17:04:12] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a67b08315ccd5ce8a312748ef55a57bc).
+[2024-01-08 17:04:14] [INFO    ] root: Bot is ready.
+[2024-01-08 17:04:39] [INFO    ] discord.client: logging in using static token
+[2024-01-08 17:04:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c7581849b331912bdd7490456979d173).
+[2024-01-08 17:04:42] [INFO    ] root: Bot is ready.
+[2024-01-08 17:04:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:04:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:04:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:19] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:26] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:27] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
+[2024-01-08 17:05:29] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 39, in on_raw_reaction_add
+    self.bot.database.insert(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: reactions.reaction_name
