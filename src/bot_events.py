@@ -26,7 +26,7 @@ class EventsCog(commands.Cog):
         channel_id = payload.channel_id
         guild_id = payload.guild_id
 
-        self.bot.database.insert(
+        self.bot.database.insert_or_update(
             table_name="reactions",
             columns="reaction_name, emoji, guild_id, message_id, channel_id, user_id",
             values=f"'{emoji.name}', '{emoji}', {guild_id}, {message_id}, {channel_id}, {user_id}"

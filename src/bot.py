@@ -41,6 +41,7 @@ async def main():
     async with bot:
         await bot.load_extension("bot_commands")
         await bot.load_extension("bot_events")
+        await bot.load_extension("systems")
         await bot.start(token)
 
 asyncio.run(main())

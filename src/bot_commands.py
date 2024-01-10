@@ -1,6 +1,8 @@
 from discord.ext import commands
 from discord import app_commands
 
+import asyncio
+import time
 import discord
 
 import data_types
@@ -26,6 +28,53 @@ class CommandsCog(commands.Cog):
             await self.bot.tree.sync()
 
             await ctx.send(content="Success")
+
+    @app_commands.command(name="selfmute", description="Mute yourself")
+    async def selfmute(self, interaction, duration_in_seconds: int):
+        if duration_in_seconds < 0:
+            await interaction.response.send_message(content="Duration must be positive.", ephemeral=False)
+            return
+        muted_role = discord.utils.get(interaction.guild.roles, name="muted")
+
+        if muted_role is None:
+            await interaction.response.send_message(content="Muted role not found.", ephemeral=False)
+            return
+
+        await interaction.user.add_roles(muted_role)
+        self.bot.database.insert_or_update(
+            table_name="muted_users",
+            columns="user_id, guild_id, muted, muted_untill",
+            values=f"{interaction.user.id}, {interaction.guild.id}, 1, {time.time() + duration_in_seconds}"
+        )
+
+        await interaction.response.send_message(content=f"You are muted for {duration_in_seconds} seconds", ephemeral=False)
+
+
+    @app_commands.command(name="mute", description="Mute a user")
+    async def mute_user(self, interaction, user: discord.User, duration_in_seconds: int):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=False)
+            return
+
+        if duration_in_seconds < 0:
+            await interaction.response.send_message(content="Duration must be positive.", ephemeral=True)
+            return
+
+        muted_role = discord.utils.get(interaction.guild.roles, name="muted")
+
+        if muted_role is None:
+            await interaction.response.send_message(content="Muted role not found.", ephemeral=True)
+            return
+
+        await user.add_roles(muted_role)
+        self.bot.database.insert_or_update(
+            table_name="muted_users",
+            columns="user_id, guild_id, muted, muted_untill",
+            values=f"{user.id}, {interaction.guild.id}, 1, {time.time() + duration_in_seconds}"
+        )
+
+        await interaction.response.send_message(content=f"{user.mention} is muted for {duration_in_seconds} seconds", ephemeral=False)
+
 
     @app_commands.command(name="reaction_stats", description="Get reaction stats")
     async def reaction_stats(self, interaction):
@@ -63,7 +112,7 @@ class CommandsCog(commands.Cog):
             await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=False)
             return
 
-        self.bot.database.insert(
+        self.bot.database.insert_or_update(
             table_name="reaction_tracker",
             columns="guild_id, reactions_announcement_channel_id, tracked_reaction_emoji",
             values=f"{interaction.guild.id}, {announcement_channel_id.id}, '{reaction}'"

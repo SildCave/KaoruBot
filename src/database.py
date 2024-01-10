@@ -9,8 +9,8 @@ class Database:
     def create_table(self, table_name, columns):
         self.conn.execute(f"CREATE TABLE IF NOT EXISTS {table_name} ({columns})")
 
-    def insert(self, table_name, columns, values):
-        self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+    def insert_or_update(self, table_name, columns, values):
+        self.conn.execute(f"INSERT OR REPLACE INTO {table_name} ({columns}) VALUES ({values})")
         self.conn.commit()
 
     def select(self, table_name, columns, where):
@@ -46,6 +46,11 @@ def create_schema(
     database.create_table(
         table_name="reaction_tracker",
         columns="guild_id INTEGER, reactions_announcement_channel_id INTEGER, tracked_reaction_emoji TEXT"
+    )
+
+    database.create_table(
+        table_name="muted_users",
+        columns="user_id INTEGER PRIMARY KEY, guild_id INTEGER, muted INTEGER, muted_untill INTEGER"
     )
 
 db = Database()

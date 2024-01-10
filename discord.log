@@ -114,7 +114,7 @@ Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
     return await self._callback(self.binding, interaction, **params)  # type: ignore
   File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
-    self.bot.database.insert(
+    self.bot.database.insert_or_update(
   File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
     self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
 sqlite3.OperationalError: table reaction_tracker has no column named trached_reaction_emoji
@@ -269,7 +269,7 @@ Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
     return await self._callback(self.binding, interaction, **params)  # type: ignore
   File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
-    self.bot.database.insert(
+    self.bot.database.insert_or_update(
   File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
     self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
 sqlite3.OperationalError: attempt to write a readonly database
@@ -289,7 +289,7 @@ Traceback (most recent call last):
   File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
     return await self._callback(self.binding, interaction, **params)  # type: ignore
   File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 67, in add_reaction_to_tracker
-    self.bot.database.insert(
+    self.bot.database.insert_or_update(
   File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
     self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
 sqlite3.OperationalError: attempt to write a readonly database
@@ -561,3 +561,1538 @@ Traceback (most recent call last):
   File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
     return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
 sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:34:31] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:34:38] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:38:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:39:36] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:39:46] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:40:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:40:31] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:23] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:27] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:32] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:34] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:37] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:41] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:48] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:52] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:53] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:46:56] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:47:09] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:47:11] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:47:12] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:47:17] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:47:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:49:30] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:50:41] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:51:56] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:51:59] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:52:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 53165ba1cd4371e94dd83d7bc56ab4ed).
+[2024-01-08 19:52:04] [INFO    ] root: Bot is ready.
+[2024-01-08 19:53:58] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:54:00] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 19:54:01] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 42, in selfmute
+    await interaction.user.add_roles(muted_role)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/member.py", line 1051, in add_roles
+    await req(guild_id, user_id, role.id, reason=reason)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/http.py", line 739, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+[2024-01-08 19:57:17] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 19:57:18] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 57, in selfmute
+    await interaction.response.send_message(content=f"You are unmuted.", ephemeral=False)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/interactions.py", line 774, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: InteractionResponded: This interaction has already been responded to before
+[2024-01-08 19:57:48] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:57:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a421f67e8cc3de846cd172d3b53047f9).
+[2024-01-08 19:57:51] [INFO    ] root: Bot is ready.
+[2024-01-08 19:58:07] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 19:58:07] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 43, in selfmute
+    self.bot.database.insert_or_update(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: muted_users.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: IntegrityError: UNIQUE constraint failed: muted_users.user_id
+[2024-01-08 19:58:59] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:59:05] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 19:59:13] [INFO    ] discord.client: logging in using static token
+[2024-01-08 19:59:14] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dfa4b74d48e934f03c9af0928870b341).
+[2024-01-08 19:59:16] [INFO    ] root: Bot is ready.
+[2024-01-08 20:00:13] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:00:13] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 43, in selfmute
+    self.bot.database.insert_or_update(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: muted_users.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: IntegrityError: UNIQUE constraint failed: muted_users.user_id
+[2024-01-08 20:01:14] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:01:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:01:54] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:02:13] [INFO    ] discord.client: logging in using static token
+[2024-01-08 20:02:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 26e215cc046b4b3dfa5979fbebcf786f).
+[2024-01-08 20:02:17] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:02:17] [INFO    ] root: Bot is ready.
+[2024-01-08 20:02:17] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 44, in selfmute
+    self.bot.database.insert_or_update(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: muted_users.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: IntegrityError: UNIQUE constraint failed: muted_users.user_id
+[2024-01-08 20:03:10] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:03:51] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:05:38] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:07:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 455abb0a4e1eb6bc9bda880366c01c6a.
+[2024-01-08 20:07:16] [INFO    ] discord.client: logging in using static token
+[2024-01-08 20:07:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e694c196d10406478e13e9f39e962cab).
+[2024-01-08 20:07:20] [INFO    ] root: Bot is ready.
+[2024-01-08 20:07:37] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:07:37] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 44, in selfmute
+    self.bot.database.insert_or_update(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO OR IGNORE {table_name} ({columns}) VALUES ({values})")
+sqlite3.OperationalError: near "OR": syntax error
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: OperationalError: near "OR": syntax error
+[2024-01-08 20:08:10] [INFO    ] discord.client: logging in using static token
+[2024-01-08 20:08:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: d17583a671459f3c861df5ada8ecda74).
+[2024-01-08 20:08:13] [INFO    ] root: Bot is ready.
+[2024-01-08 20:08:18] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:08:31] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 58, in selfmute
+    await interaction.response.send_message(content=f"You are unmuted.", ephemeral=False)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/interactions.py", line 774, in send_message
+    raise InteractionResponded(self._parent)
+discord.errors.InteractionResponded: This interaction has already been responded to before
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: InteractionResponded: This interaction has already been responded to before
+[2024-01-08 20:09:39] [INFO    ] discord.client: logging in using static token
+[2024-01-08 20:09:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4a4adf8293b7310704354dcc758cb071).
+[2024-01-08 20:09:42] [INFO    ] root: Bot is ready.
+[2024-01-08 20:09:44] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:10:08] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:10:52] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:11:44] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'selfmute' not found
+[2024-01-08 20:12:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:15:17] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:15:36] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:16:49] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:19:22] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:24:32] [ERROR   ] discord.client: Attempting a reconnect in 1.44s
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-01-08 20:24:34] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 455abb0a4e1eb6bc9bda880366c01c6a.
+[2024-01-08 20:25:55] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:27:01] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:28:33] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:28:44] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:29:07] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:30:32] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:33:34] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:33:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:34:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:36:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:39:01] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:39:03] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:39:04] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:51:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:51:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:52:06] [ERROR   ] discord.client: Attempting a reconnect in 1.54s
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-01-08 20:52:08] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4a4adf8293b7310704354dcc758cb071.
+[2024-01-08 20:52:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:52:22] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 20:55:04] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:08:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:10:36] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:11:45] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 58, in selfmute
+    await interaction.followup.send(content=f"{interaction.user.mention} You are unmuted.", ephemeral=False)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 1805, in send
+    data = await adapter.execute_webhook(
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/webhook/async_.py", line 221, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 401 Unauthorized (error code: 50027): Invalid Webhook Token
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: HTTPException: 401 Unauthorized (error code: 50027): Invalid Webhook Token
+[2024-01-08 21:14:31] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:15:25] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:15:54] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:23:02] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 455abb0a4e1eb6bc9bda880366c01c6a.
+[2024-01-08 21:28:03] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:28:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:28:23] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:32:27] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:32:33] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:34:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4a4adf8293b7310704354dcc758cb071.
+[2024-01-08 21:36:06] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:37:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:37:19] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:37:20] [WARNING ] discord.http: We are being rate limited. GET https://discord.com/api/v10/channels/1193603529298940107/messages/1194016954818760825 responded with 429. Retrying in 0.30 seconds.
+[2024-01-08 21:37:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:37:25] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:44:32] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:49:57] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:50:11] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:50:19] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:50:39] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:50:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:50:51] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:51:15] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:51:42] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:52:53] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:59:16] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:59:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 21:59:41] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:03:30] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:03:46] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:09:03] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:10:28] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:10:55] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:11:04] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:12:57] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:13:00] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:14:37] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:22:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:22:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:22:50] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:31:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:32:26] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:32:29] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:35:04] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:47:23] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:48:12] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:48:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 455abb0a4e1eb6bc9bda880366c01c6a.
+[2024-01-08 22:49:20] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:49:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:52:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:56:24] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 22:57:00] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:00:33] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:02:01] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:08:40] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 455abb0a4e1eb6bc9bda880366c01c6a.
+[2024-01-08 23:23:11] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:30:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:31:11] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:31:52] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:32:21] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-08 23:48:49] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4a4adf8293b7310704354dcc758cb071.
+[2024-01-08 23:54:45] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:00:15] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:05:30] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:08:12] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:09:43] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:10:37] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:11:46] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:13:30] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:14:18] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:14:47] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:17:54] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:18:41] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 00:18:52] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 51, in on_raw_reaction_add
+    table_name="reaction_tracker",
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 17, in select
+    return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+sqlite3.OperationalError: no such column: message_id
+[2024-01-09 18:56:18] [INFO    ] discord.client: logging in using static token
+[2024-01-09 18:56:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: e0bc2769d42664c9a72e250b0bc380d4).
+[2024-01-09 18:56:21] [INFO    ] root: Bot is ready.
+[2024-01-09 19:35:54] [ERROR   ] discord.client: Attempting a reconnect in 0.75s
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-01-09 19:35:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e0bc2769d42664c9a72e250b0bc380d4.
+[2024-01-09 22:19:05] [WARNING ] discord.gateway: Can't keep up, shard ID None websocket is 13.5s behind.
+[2024-01-09 22:51:44] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e0bc2769d42664c9a72e250b0bc380d4.
+[2024-01-09 23:01:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session e0bc2769d42664c9a72e250b0bc380d4.
+[2024-01-09 23:24:21] [ERROR   ] discord.app_commands.tree: Ignoring exception in command tree
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1125, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'ss' not found
+[2024-01-10 16:11:55] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:11:56] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 005358957bcf66a68a1c9a59c4dae746).
+[2024-01-10 16:11:58] [INFO    ] root: Bot is ready.
+[2024-01-10 16:13:46] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:13:48] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18d7ef70b5d4a06491258f09e05f287a).
+[2024-01-10 16:13:50] [INFO    ] root: Bot is ready.
+[2024-01-10 16:15:00] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:15:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9fd1ab80f8e6afcd6920c224141a7660).
+[2024-01-10 16:15:04] [INFO    ] root: Bot is ready.
+[2024-01-10 16:18:09] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:18:10] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a3f98028c13bfd5b4cccdd77242b9e59).
+[2024-01-10 16:18:12] [INFO    ] root: Bot is ready.
+[2024-01-10 16:18:27] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:18:29] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 2aa4e3f67b99fc191d7b4db51b7f64f9).
+[2024-01-10 16:18:31] [INFO    ] root: Bot is ready.
+[2024-01-10 16:23:01] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:23:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 633070af98950cf80bafa305f7356b94).
+[2024-01-10 16:23:04] [INFO    ] root: Bot is ready.
+[2024-01-10 16:23:14] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'selfmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 44, in selfmute
+    self.bot.database.insert_or_update(
+  File "/home/sild/Documents/KaoruBot/src/database.py", line 13, in insert
+    self.conn.execute(f"INSERT INTO {table_name} ({columns}) VALUES ({values})")
+sqlite3.IntegrityError: UNIQUE constraint failed: muted_users.user_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exception: IntegrityError: UNIQUE constraint failed: muted_users.user_id
+[2024-01-10 16:24:51] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:24:52] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cba05cf2170e4a6443889724f34552f0).
+[2024-01-10 16:24:54] [INFO    ] root: Bot is ready.
+[2024-01-10 16:27:35] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:27:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3555fe571dd73afbd1f204103f70f867).
+[2024-01-10 16:27:38] [INFO    ] root: Bot is ready.
