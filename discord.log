@@ -2096,3 +2096,106 @@ discord.app_commands.errors.CommandInvokeError: Command 'selfmute' raised an exc
 [2024-01-10 16:27:35] [INFO    ] discord.client: logging in using static token
 [2024-01-10 16:27:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3555fe571dd73afbd1f204103f70f867).
 [2024-01-10 16:27:38] [INFO    ] root: Bot is ready.
+[2024-01-10 16:40:07] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:40:09] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 007d353ff0b8b8ab02ce6980ab8cad33).
+[2024-01-10 16:40:11] [INFO    ] root: Bot is ready.
+[2024-01-10 16:40:52] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:40:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9c95308fcf6bfc2e1c7aa8cff3c6f92b).
+[2024-01-10 16:48:03] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:48:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4667beb14daf8fa1fc66349c4b05514f).
+[2024-01-10 16:48:06] [INFO    ] root: Bot is ready.
+[2024-01-10 16:48:22] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:48:23] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 10f6065f9c722dbe83e742d57cad28c9).
+[2024-01-10 16:48:25] [INFO    ] root: Bot is ready.
+[2024-01-10 16:53:36] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:53:37] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4c4426b36ceb4c446b5b6b9abb1d31f5).
+[2024-01-10 16:53:39] [INFO    ] root: Bot is ready.
+[2024-01-10 16:57:17] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:57:18] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 262a380bac58184e8364487a5ee5478c).
+[2024-01-10 16:57:20] [INFO    ] root: Bot is ready.
+[2024-01-10 16:58:05] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:58:06] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 80f9d50be453f653cb6ac45d68efb54c).
+[2024-01-10 16:58:08] [INFO    ] root: Bot is ready.
+[2024-01-10 16:58:22] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:58:23] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 883764a417c14da675827518af4bc47e).
+[2024-01-10 16:58:26] [INFO    ] root: Bot is ready.
+[2024-01-10 16:59:14] [INFO    ] discord.client: logging in using static token
+[2024-01-10 16:59:15] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 36a526ee5053485adbeecf313c5c4d92).
+[2024-01-10 16:59:17] [INFO    ] root: Bot is ready.
+[2024-01-10 17:01:36] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:01:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: deac25922709ef8f4d32357b25a037c7).
+[2024-01-10 17:01:40] [INFO    ] root: Bot is ready.
+[2024-01-10 17:02:57] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:02:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 084d629d50305d4720c44b493f7554df).
+[2024-01-10 17:03:00] [INFO    ] root: Bot is ready.
+[2024-01-10 17:04:06] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:04:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bf4c7f1ff63410d5efb4c0ce1dc67b34).
+[2024-01-10 17:04:09] [INFO    ] root: Bot is ready.
+[2024-01-10 17:05:06] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:05:07] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a57162660a096178b54ebc153a97ed7f).
+[2024-01-10 17:05:09] [INFO    ] root: Bot is ready.
+[2024-01-10 17:05:29] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'unmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 45, in unmute_user
+    muted_user = data_types.MutedUser(muted_user)
+  File "/home/sild/Documents/KaoruBot/src/data_types.py", line 17, in __init__
+    self.user_id = muted_user[0]
+TypeError: 'sqlite3.Cursor' object is not subscriptable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'unmute' raised an exception: TypeError: 'sqlite3.Cursor' object is not subscriptable
+[2024-01-10 17:05:54] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:05:55] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cd0f27302c529494b892ee444c62ef83).
+[2024-01-10 17:05:57] [INFO    ] root: Bot is ready.
+[2024-01-10 17:06:00] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'unmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 45, in unmute_user
+    muted_user = data_types.MutedUser(muted_user[0])
+TypeError: 'sqlite3.Cursor' object is not subscriptable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'unmute' raised an exception: TypeError: 'sqlite3.Cursor' object is not subscriptable
+[2024-01-10 17:07:26] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:07:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c2a07108cff086413610f52fd064fade).
+[2024-01-10 17:07:29] [INFO    ] root: Bot is ready.
+[2024-01-10 17:07:32] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'unmute'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 45, in unmute_user
+    if len(muted_user) == 0:
+TypeError: object of type 'sqlite3.Cursor' has no len()
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 842, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'unmute' raised an exception: TypeError: object of type 'sqlite3.Cursor' has no len()
+[2024-01-10 17:08:52] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:08:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5b72fbd9f288f52f73b57abbc9846520).
+[2024-01-10 17:08:55] [INFO    ] root: Bot is ready.

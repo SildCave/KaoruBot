@@ -1,2 +1,2 @@
 discord.py==2.3.*
-
+humanfriendly==9.2

@@ -6,6 +6,7 @@ import time
 import discord
 
 import data_types
+import output_prettifier
 
 class CommandsCog(commands.Cog):
     def __init__(self, bot):
@@ -29,6 +30,45 @@ class CommandsCog(commands.Cog):
 
             await ctx.send(content="Success")
 
+    @app_commands.command(name="unmute", description="Unmute a user")
+    async def unmute_user(self, interaction, user: discord.User):
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=True)
+            return
+
+        #check if user is muted
+        muted_user = self.bot.database.select(
+            table_name="muted_users",
+            columns="*",
+            where=f"user_id = {user.id} AND guild_id = {interaction.guild.id}"
+        )
+        if len(muted_user) == 0:
+            await interaction.response.send_message(content="User is not muted.", ephemeral=True)
+            return
+        
+        muted_user = data_types.MutedUser(muted_user[0])
+
+        if muted_user.muted == 0:
+            await interaction.response.send_message(content="User is not muted.", ephemeral=True)
+            return
+
+        muted_role = discord.utils.get(interaction.guild.roles, name="muted")
+
+        if muted_role is None:
+            await interaction.response.send_message(content="Muted role not found.", ephemeral=True)
+            return
+
+        await user.remove_roles(muted_role)
+        self.bot.database.update(
+            table_name="muted_users",
+            set=f"muted = 0",
+            where=f"user_id = {user.id} AND guild_id = {interaction.guild.id}"
+        )
+
+        response = output_prettifier.UnmuteCommandResponse(user).to_embed()
+
+        await interaction.response.send_message(embed=response, ephemeral=False)
+
     @app_commands.command(name="selfmute", description="Mute yourself")
     async def selfmute(self, interaction, duration_in_seconds: int):
         if duration_in_seconds < 0:
@@ -47,13 +87,16 @@ class CommandsCog(commands.Cog):
             values=f"{interaction.user.id}, {interaction.guild.id}, 1, {time.time() + duration_in_seconds}"
         )
 
-        await interaction.response.send_message(content=f"You are muted for {duration_in_seconds} seconds", ephemeral=False)
+        response = output_prettifier.SelfMuteResponse(duration_in_seconds, interaction.user).to_embed()
+
+        await interaction.response.send_message(embed=response, ephemeral=False)
 
 
     @app_commands.command(name="mute", description="Mute a user")
-    async def mute_user(self, interaction, user: discord.User, duration_in_seconds: int):
+    async def mute_user(self, interaction, user: discord.User, days: int=0, hours: int=0, minutes: int=0, seconds: int=0):
+        duration_in_seconds = days * 86400 + hours * 3600 + minutes * 60 + seconds
         if not interaction.user.guild_permissions.administrator:
-            await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=False)
+            await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=True)
             return
 
         if duration_in_seconds < 0:
@@ -63,7 +106,7 @@ class CommandsCog(commands.Cog):
         muted_role = discord.utils.get(interaction.guild.roles, name="muted")
 
         if muted_role is None:
-            await interaction.response.send_message(content="Muted role not found.", ephemeral=True)
+            await interaction.response.send_message(content="Mute role not found.", ephemeral=True)
             return
 
         await user.add_roles(muted_role)
@@ -73,37 +116,9 @@ class CommandsCog(commands.Cog):
             values=f"{user.id}, {interaction.guild.id}, 1, {time.time() + duration_in_seconds}"
         )
 
-        await interaction.response.send_message(content=f"{user.mention} is muted for {duration_in_seconds} seconds", ephemeral=False)
+        response = output_prettifier.MuteCommandResponse(duration_in_seconds, user).to_embed()
 
-
-    @app_commands.command(name="reaction_stats", description="Get reaction stats")
-    async def reaction_stats(self, interaction):
-        reactions = self.bot.database.select(
-            table_name="reactions",
-            columns="*",
-            where=f"guild_id = {interaction.guild.id}"
-        )
-
-        reaction_stats = {}
-        for reaction in reactions:
-            reaction = data_types.Reaction(reaction)
-            if reaction.user_id == interaction.user.id:
-                reaction_stats[reaction.emoji] = reaction_stats.get(reaction.emoji, 0) + 1
-
-        message_embed = discord.Embed(
-            title="Reaction Stats",
-            description="",
-            color=0x00ff00
-        )
-
-        for reaction in reaction_stats:
-            message_embed.add_field(
-                name=reaction,
-                value=reaction_stats[reaction],
-                inline=True
-            )
-
-        await interaction.response.send_message(embed=message_embed, ephemeral=False)
+        await interaction.response.send_message(embed=response, ephemeral=False)
 
 
     @app_commands.command(name="register_reaction_for_tracking", description="Add reaction to the tracker")

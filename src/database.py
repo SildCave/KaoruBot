@@ -14,7 +14,7 @@ class Database:
         self.conn.commit()
 
     def select(self, table_name, columns, where):
-        return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}")
+        return self.conn.execute(f"SELECT {columns} FROM {table_name} WHERE {where}").fetchall()
     
     def update(self, table_name, set, where):
         self.conn.execute(f"UPDATE {table_name} SET {set} WHERE {where}")
