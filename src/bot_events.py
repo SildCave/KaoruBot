@@ -3,6 +3,46 @@ from discord import app_commands
 
 import logging
 
+async def handle_reaction_role_add(self, payload):
+    message_id = payload.message_id
+    guild_id = payload.guild_id
+    print(message_id)
+    registered_reactions = self.bot.database.select(
+        table_name="roles",
+        columns="*",
+        where=f"message_id = {message_id}"
+    )
+
+    for reaction in registered_reactions:
+        reaction_emoji = reaction[1]
+        reaction_role_id = reaction[0]
+        if reaction_emoji.strip() == str(payload.emoji).strip():
+            print("reaction role add")
+            guild = self.bot.get_guild(guild_id)
+            member = guild.get_member(payload.user_id)
+            role = guild.get_role(reaction_role_id)
+            await member.add_roles(role)
+
+async def handle_reaction_role_remove(self, payload):
+    message_id = payload.message_id
+    guild_id = payload.guild_id
+    print(message_id)
+    registered_reactions = self.bot.database.select(
+        table_name="roles",
+        columns="*",
+        where=f"message_id = {message_id}"
+    )
+
+    for reaction in registered_reactions:
+        reaction_emoji = reaction[1]
+        reaction_role_id = reaction[0]
+        if reaction_emoji.strip() == str(payload.emoji).strip():
+            print("reaction role remove")
+            guild = self.bot.get_guild(guild_id)
+            member = guild.get_member(payload.user_id)
+            role = guild.get_role(reaction_role_id)
+            await member.remove_roles(role)
+
 class EventsCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
@@ -12,14 +52,11 @@ class EventsCog(commands.Cog):
         logging.info("Bot is ready.")
         print("Bot is ready.")
 
+
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         # Track reactions
-
-        channel = await self.bot.fetch_channel(payload.channel_id)
-        message = await channel.fetch_message(payload.message_id)
-        user = await self.bot.fetch_user(payload.user_id)
-
+        print("reaction add")
         emoji = payload.emoji
         user_id = payload.user_id
         message_id = payload.message_id
@@ -33,9 +70,14 @@ class EventsCog(commands.Cog):
         )
 
     @commands.Cog.listener()
+    async def on_raw_reaction_remove(self, payload):
+        await handle_reaction_role_remove(self, payload)
+
+    @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         # Send info about subscribed reactions
-
+        await handle_reaction_role_add(self, payload)
+        print("reaction add")
         channel = await self.bot.fetch_channel(payload.channel_id)
         message = await channel.fetch_message(payload.message_id)
         user = await self.bot.fetch_user(payload.user_id)

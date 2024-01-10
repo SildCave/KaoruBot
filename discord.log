@@ -2199,3 +2199,127 @@ discord.app_commands.errors.CommandInvokeError: Command 'unmute' raised an excep
 [2024-01-10 17:08:52] [INFO    ] discord.client: logging in using static token
 [2024-01-10 17:08:53] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5b72fbd9f288f52f73b57abbc9846520).
 [2024-01-10 17:08:55] [INFO    ] root: Bot is ready.
+[2024-01-10 17:16:19] [ERROR   ] discord.client: Attempting a reconnect in 1.49s
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2024-01-10 17:16:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 5b72fbd9f288f52f73b57abbc9846520.
+[2024-01-10 17:39:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 5b72fbd9f288f52f73b57abbc9846520.
+[2024-01-10 17:56:16] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:56:17] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 34f83db9c7706a2a10b755d21f9314c7).
+[2024-01-10 17:56:19] [INFO    ] root: Bot is ready.
+[2024-01-10 17:57:52] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'attach_new_role_to_reaction'
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 827, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/home/sild/Documents/KaoruBot/src/bot_commands.py", line 140, in attach_new_role_to_reaction
+    message = await interaction.channel.fetch_message(message_id)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/abc.py", line 1624, in fetch_message
+    data = await self._state.http.get_message(channel.id, id)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/http.py", line 741, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10008): Unknown Message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1248, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 853, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/app_commands/commands.py", line 846, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'attach_new_role_to_reaction' raised an exception: NotFound: 404 Not Found (error code: 10008): Unknown Message
+[2024-01-10 17:59:53] [INFO    ] discord.client: logging in using static token
+[2024-01-10 17:59:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0a32f04877a643641f3014eed7c66b98).
+[2024-01-10 17:59:56] [INFO    ] root: Bot is ready.
+[2024-01-10 18:02:01] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:02:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0714144f2cc80c7f36db631b5037ad9f).
+[2024-01-10 18:02:04] [INFO    ] root: Bot is ready.
+[2024-01-10 18:02:23] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:02:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 9cfa9d6331c83dc5d5a48c0d5d96f557).
+[2024-01-10 18:02:26] [INFO    ] root: Bot is ready.
+[2024-01-10 18:03:05] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:03:06] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 66824e7f1878b9e1acfefc20a09ce60b).
+[2024-01-10 18:03:08] [INFO    ] root: Bot is ready.
+[2024-01-10 18:03:57] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:03:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: dfb571a62ba733500caa0e50bd4aff70).
+[2024-01-10 18:04:00] [INFO    ] root: Bot is ready.
+[2024-01-10 18:05:20] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:05:21] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 2623ef566fa967548cdb89a6343aea09).
+[2024-01-10 18:05:23] [INFO    ] root: Bot is ready.
+[2024-01-10 18:07:01] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:07:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ab550436a5a9b06492bc3b4b76a84150).
+[2024-01-10 18:07:04] [INFO    ] root: Bot is ready.
+[2024-01-10 18:07:56] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:07:57] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3c9aa4931dafa9504fc9026834ba4193).
+[2024-01-10 18:07:59] [INFO    ] root: Bot is ready.
+[2024-01-10 18:08:07] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:08:08] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f8a43e3a00cb15c322559e120fc7f987).
+[2024-01-10 18:08:10] [INFO    ] root: Bot is ready.
+[2024-01-10 18:08:41] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:08:42] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 50a0cfdbd583db953fe0946b69a5a6cd).
+[2024-01-10 18:08:44] [INFO    ] root: Bot is ready.
+[2024-01-10 18:09:19] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:09:20] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 46fdf19f9dee4c684cd78ca2aa72c305).
+[2024-01-10 18:09:22] [INFO    ] root: Bot is ready.
+[2024-01-10 18:09:45] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:09:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 79c634c4e71f5505550d86976ece8a77).
+[2024-01-10 18:09:48] [INFO    ] root: Bot is ready.
+[2024-01-10 18:10:03] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:10:04] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 54eeb2224c4bfcf231cab6f7726b5338).
+[2024-01-10 18:10:06] [INFO    ] root: Bot is ready.
+[2024-01-10 18:10:07] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 56, in on_raw_reaction_add
+    await handle_reaction_role_add(self, payload)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 19, in handle_reaction_role_add
+    print(reaction_emoji.strip() == payload.emoji.strip())
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-10 18:10:19] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 56, in on_raw_reaction_add
+    await handle_reaction_role_add(self, payload)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 19, in handle_reaction_role_add
+    print(reaction_emoji.strip() == payload.emoji.strip())
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-10 18:10:56] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 56, in on_raw_reaction_add
+    await handle_reaction_role_add(self, payload)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 19, in handle_reaction_role_add
+    print(reaction_emoji.strip() == payload.emoji.strip())
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-10 18:11:18] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:11:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 5db4b00b904b6925d436a2808eaf6395).
+[2024-01-10 18:11:21] [INFO    ] root: Bot is ready.
+[2024-01-10 18:11:22] [ERROR   ] discord.client: Ignoring exception in on_raw_reaction_add
+Traceback (most recent call last):
+  File "/home/sild/.local/lib/python3.10/site-packages/discord/client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 57, in on_raw_reaction_add
+    await handle_reaction_role_add(self, payload)
+  File "/home/sild/Documents/KaoruBot/src/bot_events.py", line 20, in handle_reaction_role_add
+    print(reaction_emoji.strip() == payload.emoji.strip())
+AttributeError: 'PartialEmoji' object has no attribute 'strip'
+[2024-01-10 18:11:46] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:11:47] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 62c28609e30188208a32cbd3637fc081).
+[2024-01-10 18:11:49] [INFO    ] root: Bot is ready.
+[2024-01-10 18:12:10] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:12:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cce2199aac3206581ea885ede6850c3f).
+[2024-01-10 18:12:13] [INFO    ] root: Bot is ready.
+[2024-01-10 18:17:35] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:17:36] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7fe021dfd02e8d3e7b2973a111250951).
+[2024-01-10 18:17:38] [INFO    ] root: Bot is ready.
+[2024-01-10 18:29:32] [INFO    ] discord.client: logging in using static token
+[2024-01-10 18:29:33] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 31c6a2379f32014b70c589a64e81fb5e).
+[2024-01-10 18:29:35] [INFO    ] root: Bot is ready.

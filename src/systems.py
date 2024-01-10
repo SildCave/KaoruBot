@@ -23,7 +23,6 @@ class Systems(commands.Cog):
 
         for muted_user in muted_users:
             muted_user = data_types.MutedUser(muted_user)
-            print(muted_user)
             if muted_user.muted_untill < time.time():
                 guild = self.bot.get_guild(muted_user.guild_id)
                 member = guild.get_member(muted_user.user_id)

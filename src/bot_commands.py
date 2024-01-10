@@ -134,7 +134,24 @@ class CommandsCog(commands.Cog):
         )
 
         await interaction.response.send_message(content="Reaction added to tracker.", ephemeral=True)
+    
+    @app_commands.command(name="attach_role_to_reaction", description="Attach new role to reaction")
+    async def attach_new_role_to_reaction(self, interaction: discord.Interaction, role_id: discord.Role, emoji: str, message_id: str):
+        message = await interaction.channel.fetch_message(int(message_id))
+        role = role_id
 
+        if not interaction.user.guild_permissions.administrator:
+            await interaction.response.send_message(content="You must be an administrator to use this command.", ephemeral=False)
+            return
+
+        self.bot.database.insert_or_update(
+            table_name="roles",
+            columns="role_id, emoji, guild_id, message_id, channel_id",
+            values=f"{role.id}, '{emoji}', {interaction.guild.id}, {message.id}, {message.channel.id}"
+        )
+
+        await message.add_reaction(emoji)
+        await interaction.response.send_message(content="Role attached to reaction.", ephemeral=True)
 
 async def setup(bot):
     await bot.add_cog(CommandsCog(bot))
